@@ -73,7 +73,7 @@
 
   CONFIG.DST_STYLE = 'css/styles';
 
-  CONFIG.GIT_REPO_URL = 'https://github.com/davidvalentin12/elseisVimeoTranscript';
+  CONFIG.GIT_REPO_URL = 'https://github.com/davidvalentin12/elseisVimeoTranscript.git';
   CONFIG.GIT_REPO_ORIGIN = 'origin';
   CONFIG.GIT_REPO_BRANCH = 'master';
   CONFIG.COMMIT_FILES = [
@@ -87,8 +87,7 @@
     './karma.conf.js',
     './LICENSE',
     './package.json',
-      './README.md',
-    './_data'
+      './README.md'
   ];
 
 
