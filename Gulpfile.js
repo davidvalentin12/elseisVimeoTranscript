@@ -73,7 +73,7 @@
 
   CONFIG.DST_STYLE = 'css/styles';
 
-  CONFIG.GIT_REPO_URL = 'https://github.com/davidvalentin12/dvm-abt';
+  CONFIG.GIT_REPO_URL = 'https://github.com/davidvalentin12/elseisVimeoTranscript';
   CONFIG.GIT_REPO_ORIGIN = 'origin';
   CONFIG.GIT_REPO_BRANCH = 'master';
   CONFIG.COMMIT_FILES = [
