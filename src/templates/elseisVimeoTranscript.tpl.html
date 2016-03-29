@@ -38,8 +38,8 @@
             <p class="etParagraphText span_10_of_12 flt-right">
                 <span ng-repeat="textFragment in paragraph.fragments"
                       ng-click="elseisVimeoTranscriptCtrl.player.seekTo(textFragment.startTime)"
-                      ng-style=" {'text-decoration' : (textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+1 &&
-                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime+1 )? ' underline' : 'inherit' }"
+                      ng-style=" {'text-decoration' : (textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+0.5 &&
+                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-0.5 )? ' underline' : 'inherit' }"
                       ng-bind-html="textFragment.text | sanitize">
                     </span>
             </p>
