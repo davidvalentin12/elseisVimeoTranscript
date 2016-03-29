@@ -17,31 +17,6 @@
     width: 80%;
     margin: 0 auto;
   }
-  videogular {
-    .controls-container {
-      padding: 0 10%;
-    }
-    vg-controls {
-      bottom: -50px;
-    }
-  }
-  .etVideoControls {
-    border-bottom: 1px solid #969696;
-    border-top: 1px solid #969696;
-    height: 60px;
-    overflow: hidden;
-    .videoControlBox {
-      line-height: 60px;
-      padding: 0 20px 0 20px;
-      &.leftbrd {
-        border-left: 1px solid #969696;
-      }
-      &.rightbrd {
-        border-right: 1px solid #969696;
-      }
-
-    }
-  }
 
   .etTranscriptDisplay {
     margin-top: 50px;
@@ -70,6 +45,7 @@
     .etTranscriptContent {
 
       .etParagraph {
+        width:100%;
         float: left;
         min-height: 40px;
         padding: 10px 0 0 0;

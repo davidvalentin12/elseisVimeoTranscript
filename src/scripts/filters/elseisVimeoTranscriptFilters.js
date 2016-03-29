@@ -13,6 +13,11 @@
         return function(url) {
           return $sce.trustAsResourceUrl(url);
         };
+      }])
+      .filter('milisecondsToDateTime', [function() {
+        return function(miliseconds) {
+          return new Date(1970, 0, 1).setSeconds(miliseconds/1000);
+        };
       }]);
 
 }());

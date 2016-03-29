@@ -12,8 +12,6 @@
             transcriptConfig: '='
           },
           link: function(scope, element, attributes) {
-            console.log(scope.elseisVimeoTranscriptCtrl.transcriptConfig);
-
           }
         };
       });

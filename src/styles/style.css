@@ -12,22 +12,6 @@
   .elseisTranscript .etRow {
     width: 80%;
     margin: 0 auto; }
-  .elseisTranscript videogular .controls-container {
-    padding: 0 10%; }
-  .elseisTranscript videogular vg-controls {
-    bottom: -50px; }
-  .elseisTranscript .etVideoControls {
-    border-bottom: 1px solid #969696;
-    border-top: 1px solid #969696;
-    height: 60px;
-    overflow: hidden; }
-    .elseisTranscript .etVideoControls .videoControlBox {
-      line-height: 60px;
-      padding: 0 20px 0 20px; }
-      .elseisTranscript .etVideoControls .videoControlBox.leftbrd {
-        border-left: 1px solid #969696; }
-      .elseisTranscript .etVideoControls .videoControlBox.rightbrd {
-        border-right: 1px solid #969696; }
   .elseisTranscript .etTranscriptDisplay {
     margin-top: 50px;
     padding-top: 40px;
@@ -47,6 +31,7 @@
         padding: 10px;
         color: white; }
     .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph {
+      width: 100%;
       float: left;
       min-height: 40px;
       padding: 10px 0 0 0; }
