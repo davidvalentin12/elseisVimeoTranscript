@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="elseisVimeoTranscript" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="elseisVimeoTranscript" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="elseisVimeoTranscript" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="elseisVimeoTranscript" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ################################
+        ### [BEGIN] CSS DEPENDENCIES ###
+        ################################ -->
+
+    <!-- bower:css -->
+
+
+   
+
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="src/styles/elseisTranscript.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <!-- endinject -->
+
+    <!-- ##############################
+         ### [END] CSS DEPENDENCIES ###
+        ############################## -->
+
+
+</head>
+<body ng-controller="confCtrl">
+
+
+<div elseis-vimeo-transcript class="elseisTranscript"
+     transcript-config="transcriptConfig"
+></div>
+
+
+
+
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- endinject -->
+
+<!-- inject:js -->
+<script src="src/scripts/elseisVimeoTranscript.js"></script>
+<script src="src/scripts/directives/elseisVimeoTranscript.js"></script>
+<script src="src/scripts/controllers/elseisVimeoTranscript.js"></script>
+<script src="src/scripts/filters/elseisVimeoTranscriptFilters.js"></script>
+<!-- endinject-->
+
+
+<!-- <script src="dist/elseisVimeoTranscript.min.js"></script>
+<script src="dist/elseisVimeoTranscript.templates.min.js"></script>
+<link rel="stylesheet" href="dist/css/styles.min.css"> -->
+<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+</body>
+<script type="text/javascript">
+    angular.module('elseisVimeoTranscript')
+            .controller('confCtrl',
+                    function ($scope) {
+                        $scope.transcriptConfig = {
+                            videoUrl : "https://player.vimeo.com/video/76979871",
+                            langOptions :[
+                                {
+                                    lang: 'English',
+                                    transcriptUrl: '_data/elseisTranscriptData.json'
+                                },
+                                {
+                                    lang: 'Spanish',
+                                    transcriptUrl: '_data/elseisTranscriptData.json'
+                                }
+                            ],
+                            defaultLang : 'English'
+                        };
+                    });
+</script>
+</html>

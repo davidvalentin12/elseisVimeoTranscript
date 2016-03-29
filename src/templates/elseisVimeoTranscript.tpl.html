@@ -1,0 +1,49 @@
+<header class="logo">
+    <div class="etCenter"><img src="src/images/firma.png"></div>
+</header>
+<div class='embed-container'>
+    <iframe
+            id="player1"
+            src="{{elseisVimeoTranscriptCtrl.transcriptConfig.videoUrl | trusted}}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+</div>
+
+
+<section class="etTranscriptDisplay etRow">
+
+
+    <!--Transcription/subtitles lang menu-->
+    <aside class="span_3_of_12 flt-left">
+        <header>
+            <h3 class="etLangTitle">Subtitles and transcript</h3>
+        </header>
+        <main class="etLangSelection">
+            <span class="etLangDesc">Select Language</span>
+            <span class="etLangOption" ng-repeat="option in elseisVimeoTranscriptCtrl.transcriptLangOptions"
+
+            >{{option.id}}</span>
+        </main>
+    </aside>
+
+    <!-- Transcription -->
+    <article class="span_9_of_12 flt-right etTranscriptContent">
+
+        <div class="etParagraph" ng-repeat="paragraph in elseisVimeoTranscriptCtrl.transcriptData">
+            <div class="etParagraphTime span_2_of_12 flt-left">
+                <span ng-bind="paragraph.time"></span>
+            </div>
+            <p class="etParagraphText span_10_of_12 flt-right">
+                <span ng-repeat="textFragment in paragraph.fragments"
+                      ng-click="elseisVimeoTranscriptCtrl.player.seekTo(textFragment.startTime)"
+                      ng-style=" {'text-decoration' : (textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+1 &&
+                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime+1 )? ' underline' : 'inherit' }">
+                {{textFragment.text}}
+                    </span>
+            </p>
+        </div>
+
+    </article>
+</section>

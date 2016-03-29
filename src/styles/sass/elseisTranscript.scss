@@ -1,0 +1,89 @@
+
+.elseisTranscript {
+  background-color: #212121;
+  color: #b7b7b7;
+  .logo {
+    background-color: black;
+    img {
+      width: 85px;
+      margin: 0 auto;
+    }
+  }
+  .etCenter {
+    width: 85px;
+    margin: 0 auto;
+  }
+  .etRow {
+    width: 80%;
+    margin: 0 auto;
+  }
+  videogular {
+    .controls-container {
+      padding: 0 10%;
+    }
+    vg-controls {
+      bottom: -50px;
+    }
+  }
+  .etVideoControls {
+    border-bottom: 1px solid #969696;
+    border-top: 1px solid #969696;
+    height: 60px;
+    overflow: hidden;
+    .videoControlBox {
+      line-height: 60px;
+      padding: 0 20px 0 20px;
+      &.leftbrd {
+        border-left: 1px solid #969696;
+      }
+      &.rightbrd {
+        border-right: 1px solid #969696;
+      }
+
+    }
+  }
+
+  .etTranscriptDisplay {
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: table;
+    .etLangTitle {
+      padding: 20px 0 20px 0;
+    }
+    .etLangSelection {
+      border-bottom: 1px solid #969696;
+      border-top: 1px solid #969696;
+
+      .etLangDesc {
+        display: block;
+        color: #9b9b9b;
+        padding: 10px 5px 10px 5px;
+      }
+      .etLangOption {
+        display: block;
+        padding: 10px;
+        color: white;
+      }
+    }
+
+    .etTranscriptContent {
+
+      .etParagraph {
+        float: left;
+        min-height: 40px;
+        padding: 10px 0 0 0;
+        .etParagraphTime {
+          padding: 10px 5px 10px 5px;
+          display: table-cell;
+          text-align: center;
+        }
+        .etParagraphText {
+
+          padding: 10px 0 10px 0;
+        }
+      }
+    }
+
+  }
+}

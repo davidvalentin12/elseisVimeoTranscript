@@ -1,0 +1,216 @@
+.elseisTranscript {
+  background-color: #212121;
+  color: #b7b7b7; }
+  .elseisTranscript .logo {
+    background-color: black; }
+    .elseisTranscript .logo img {
+      width: 85px;
+      margin: 0 auto; }
+  .elseisTranscript .etCenter {
+    width: 85px;
+    margin: 0 auto; }
+  .elseisTranscript .etRow {
+    width: 80%;
+    margin: 0 auto; }
+  .elseisTranscript videogular .controls-container {
+    padding: 0 10%; }
+  .elseisTranscript videogular vg-controls {
+    bottom: -50px; }
+  .elseisTranscript .etVideoControls {
+    border-bottom: 1px solid #969696;
+    border-top: 1px solid #969696;
+    height: 60px;
+    overflow: hidden; }
+    .elseisTranscript .etVideoControls .videoControlBox {
+      line-height: 60px;
+      padding: 0 20px 0 20px; }
+      .elseisTranscript .etVideoControls .videoControlBox.leftbrd {
+        border-left: 1px solid #969696; }
+      .elseisTranscript .etVideoControls .videoControlBox.rightbrd {
+        border-right: 1px solid #969696; }
+  .elseisTranscript .etTranscriptDisplay {
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: table; }
+    .elseisTranscript .etTranscriptDisplay .etLangTitle {
+      padding: 20px 0 20px 0; }
+    .elseisTranscript .etTranscriptDisplay .etLangSelection {
+      border-bottom: 1px solid #969696;
+      border-top: 1px solid #969696; }
+      .elseisTranscript .etTranscriptDisplay .etLangSelection .etLangDesc {
+        display: block;
+        color: #9b9b9b;
+        padding: 10px 5px 10px 5px; }
+      .elseisTranscript .etTranscriptDisplay .etLangSelection .etLangOption {
+        display: block;
+        padding: 10px;
+        color: white; }
+    .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph {
+      float: left;
+      min-height: 40px;
+      padding: 10px 0 0 0; }
+      .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphTime {
+        padding: 10px 5px 10px 5px;
+        display: table-cell;
+        text-align: center; }
+      .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText {
+        padding: 10px 0 10px 0; }
+
+.elseisTranscript {
+  /* HTML RESET */
+  /*  GRID 12 COL   ============================================================================= */
+  /*  100% WIDTH AT 860 */ }
+  .elseisTranscript html, .elseisTranscript body, .elseisTranscript div, .elseisTranscript span, .elseisTranscript object, .elseisTranscript iframe,
+  .elseisTranscript h1, .elseisTranscript h2, .elseisTranscript h3, .elseisTranscript h4, .elseisTranscript h5, .elseisTranscript h6, .elseisTranscript p, .elseisTranscript blockquote, .elseisTranscript pre,
+  .elseisTranscript abbr, .elseisTranscript address, .elseisTranscript cite, .elseisTranscript code,
+  .elseisTranscript del, .elseisTranscript dfn, .elseisTranscript em, .elseisTranscript img, .elseisTranscript ins, .elseisTranscript kbd, .elseisTranscript q, .elseisTranscript samp,
+  .elseisTranscript small, .elseisTranscript strong, .elseisTranscript sub, .elseisTranscript sup, .elseisTranscript var,
+  .elseisTranscript b, .elseisTranscript i,
+  .elseisTranscript dl, .elseisTranscript dt, .elseisTranscript dd, .elseisTranscript ol, .elseisTranscript ul, .elseisTranscript li,
+  .elseisTranscript fieldset, .elseisTranscript form, .elseisTranscript label, .elseisTranscript legend,
+  .elseisTranscript table, .elseisTranscript caption, .elseisTranscript tbody, .elseisTranscript tfoot, .elseisTranscript thead, .elseisTranscript tr, .elseisTranscript th, .elseisTranscript td,
+  .elseisTranscript article, .elseisTranscript aside, .elseisTranscript canvas, .elseisTranscript details, .elseisTranscript figcaption, .elseisTranscript figure,
+  .elseisTranscript footer, .elseisTranscript header, .elseisTranscript hgroup, .elseisTranscript menu, .elseisTranscript nav, .elseisTranscript section, .elseisTranscript summary,
+  .elseisTranscript time, .elseisTranscript mark, .elseisTranscript audio, .elseisTranscript video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent; }
+  .elseisTranscript body {
+    line-height: 1; }
+  .elseisTranscript article, .elseisTranscript aside, .elseisTranscript details, .elseisTranscript figcaption, .elseisTranscript figure,
+  .elseisTranscript footer, .elseisTranscript header, .elseisTranscript hgroup, .elseisTranscript menu, .elseisTranscript nav, .elseisTranscript section {
+    display: block; }
+  .elseisTranscript nav ul {
+    list-style: none; }
+  .elseisTranscript blockquote, .elseisTranscript q {
+    quotes: none; }
+  .elseisTranscript blockquote:before, .elseisTranscript blockquote:after,
+  .elseisTranscript q:before, .elseisTranscript q:after {
+    content: none; }
+  .elseisTranscript a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent; }
+  .elseisTranscript ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none; }
+  .elseisTranscript mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold; }
+  .elseisTranscript del {
+    text-decoration: line-through; }
+  .elseisTranscript abbr[title], .elseisTranscript dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help; }
+  .elseisTranscript table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  .elseisTranscript hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0; }
+  .elseisTranscript input, .elseisTranscript select {
+    vertical-align: middle; }
+  .elseisTranscript html, .elseisTranscript body, .elseisTranscript div, .elseisTranscript span, .elseisTranscript object, .elseisTranscript iframe,
+  .elseisTranscript h1, .elseisTranscript h2, .elseisTranscript h3, .elseisTranscript h4, .elseisTranscript h5, .elseisTranscript h6, .elseisTranscript p, .elseisTranscript blockquote, .elseisTranscript pre,
+  .elseisTranscript abbr, .elseisTranscript address, .elseisTranscript cite, .elseisTranscript code,
+  .elseisTranscript del, .elseisTranscript dfn, .elseisTranscript em, .elseisTranscript img, .elseisTranscript ins, .elseisTranscript kbd, .elseisTranscript q, .elseisTranscript samp,
+  .elseisTranscript small, .elseisTranscript strong, .elseisTranscript sub, .elseisTranscript sup, .elseisTranscript var,
+  .elseisTranscript b, .elseisTranscript i,
+  .elseisTranscript dl, .elseisTranscript dt, .elseisTranscript dd, .elseisTranscript ol, .elseisTranscript ul, .elseisTranscript li,
+  .elseisTranscript fieldset, .elseisTranscript form, .elseisTranscript input, .elseisTranscript textarea, .elseisTranscript label, .elseisTranscript legend,
+  .elseisTranscript table, .elseisTranscript caption, .elseisTranscript tbody, .elseisTranscript tfoot, .elseisTranscript thead, .elseisTranscript tr, .elseisTranscript th, .elseisTranscript td,
+  .elseisTranscript article, .elseisTranscript aside, .elseisTranscript canvas, .elseisTranscript details, .elseisTranscript figcaption, .elseisTranscript figure,
+  .elseisTranscript footer, .elseisTranscript header, .elseisTranscript hgroup, .elseisTranscript menu, .elseisTranscript nav, .elseisTranscript section, .elseisTranscript summary,
+  .elseisTranscript time, .elseisTranscript mark, .elseisTranscript audio, .elseisTranscript video {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
+  .elseisTranscript .span_12_of_12 {
+    width: 100%; }
+  .elseisTranscript .span_11_of_12 {
+    width: 91.53%; }
+  .elseisTranscript .span_10_of_12 {
+    width: 83.06%; }
+  .elseisTranscript .span_9_of_12 {
+    width: 74.6%; }
+  .elseisTranscript .span_8_of_12 {
+    width: 66.13%; }
+  .elseisTranscript .span_7_of_12 {
+    width: 57.66%; }
+  .elseisTranscript .span_6_of_12 {
+    width: 49.2%; }
+  .elseisTranscript .span_5_of_12 {
+    width: 40.73%; }
+  .elseisTranscript .span_4_of_12 {
+    width: 32.26%; }
+  .elseisTranscript .span_3_of_12 {
+    width: 23.8%; }
+  .elseisTranscript .span_2_of_12 {
+    width: 15.33%; }
+  .elseisTranscript .span_1_of_12 {
+    width: 6.86%; }
+  @media only screen and (max-width: 860px) {
+    .elseisTranscript .span_12_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_11_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_10_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_9_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_8_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_7_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_6_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_5_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_4_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_3_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_2_of_12 {
+      width: 100%; }
+    .elseisTranscript .span_1_of_12 {
+      width: 100%; } }
+
+.elseisTranscript .flt-right {
+  float: right; }
+
+.elseisTranscript .flt-left {
+  float: left; }
+
+.elseisTranscript .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+  .elseisTranscript .embed-container .controls-wrapper {
+    color: blue; }
+    .elseisTranscript .embed-container .controls-wrapper .title {
+      display: none !important; }
+    .elseisTranscript .embed-container .controls-wrapper .sidedock {
+      display: none !important; }
+
+.elseisTranscript .embed-container iframe, .elseisTranscript .embed-container object, .elseisTranscript .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }

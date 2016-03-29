@@ -1,0 +1,49 @@
+[
+  {
+    "paragraphNum":1,
+    "time":"00:12",
+    "fragments":[
+      {
+        "startTime":2,
+        "endTime":5,
+        "text": "Hello. My name is Matthew Williams, and I am a champion."
+      },
+      {
+        "startTime":5,
+        "endTime":8,
+        "text": "I have won medals in three different sports and national games in Canada,"
+      },
+      {
+        "startTime":8,
+        "endTime":12,
+        "text": "competed at the international level in basketball and was proud to represent Canada on the world stage."
+      }
+    ]
+  },
+  {
+    "paragraphNum":2,
+    "time":"00:38",
+    "fragments":[
+      {
+        "startTime":38,
+        "endTime":45,
+        "text": "I train five days a week for basketball and speed skating,"
+      },
+      {
+        "startTime":45,
+        "endTime":50,
+        "text": " work with top quality coaches and mental performance consultants to be at my best in my sport."
+      },
+      {
+        "startTime":50,
+        "endTime":55,
+        "text": "By the way, all that is through Special Olympics"
+      },
+      {
+        "startTime":55,
+        "endTime":60,
+        "text": "Does that change the way you think of me and my accomplishments?"
+      }
+    ]
+  }
+]

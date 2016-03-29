@@ -1,0 +1,37 @@
+{
+  "name": "elseisVimeoTranscript",
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "elseis Vimeo transcript app",
+  "main": [
+    "./dist/elseisVimeoTranscript.js",
+    "./dist/elseisVimeoTranscript.templates.js",
+    "./dist/css/styles.css"
+  ],
+  "authors": [
+    "David Valentin Möhring <davidvalentinsemail@gmail.com>"
+  ],
+  "keywords": [
+    "elseis",
+    "vimeo",
+    "transcript"
+  ],
+  "ignore": [
+    "lang",
+    "src/*",
+    "test",
+    "_data",
+    "Gulpfile.js",
+    "gulpConfig.json",
+    "index.html",
+    "node_modules",
+    "bower_components",
+    "karma.conf.js"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "jquery": "^2.2.2"
+  },
+  "overrides": {},
+  "devDependencies": {}
+}
