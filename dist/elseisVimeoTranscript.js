@@ -3,6 +3,7 @@
 
 
   angular.module('elseisVimeoTranscript', [
+    //'elseisTemplates'
   ]);
 
 }());
@@ -16,7 +17,7 @@
             iframe = $('#player1')[0];
 
         self.vimeoPlayer = $f(iframe);
-        self.playerTime  = 0;
+        self.playerTime = 0;
 
         // When vimero player is ready
         self.vimeoPlayer.addEvent('ready', function() {
@@ -25,7 +26,7 @@
         });
 
         self.player = {
-          seekTo: function(seconds){
+          seekTo: function(seconds) {
             self.vimeoPlayer.api('seekTo', seconds);
             self.player.currentTime = seconds;
 
@@ -33,22 +34,22 @@
           currentTime: 0
         };
         self.updatePlayerTime = function updatePlayerTime(data) {
+          console.log(data.seconds);
           self.player.currentTime = data.seconds;
           $scope.$digest();
         };
 
 
-
-
-
-        //should go into a service TODO
-
-        self.getParagraphs = function getParagraphs() {
-          $http.get('_data/elseisTranscriptData.json').then(function(response) {
-            self.transcriptData = response.data;
+        self.transcriptLangOptions = {};
+        self.selectedLang = self.transcriptConfig.defaultLang;
+        angular.forEach(self.transcriptConfig.langOptions, function(langOption) {
+          $http.get(langOption.transcriptUrl).then(function(response) {
+            self.transcriptLangOptions[langOption.lang] = {
+              id: langOption.lang,
+              transcript: response.data
+            };
           });
-        };
-        self.getParagraphs();
+        });
 
 
       }]);
@@ -60,14 +61,39 @@
         return {
           restrict: 'A',
           controller: 'elseisVimeoTranscriptCtrl',
-          controllerAs : 'elseisVimeoTranscriptCtrl',
-          bindToController : true,
+          controllerAs: 'elseisVimeoTranscriptCtrl',
+          bindToController: true,
           templateUrl: 'src/templates/elseisVimeoTranscript.tpl.html',
+          scope: {
+            transcriptConfig: '='
+          },
           link: function(scope, element, attributes) {
-
-
           }
         };
       });
+
+}());
+
+(function () {
+  'use strict';
+
+
+  angular.module('elseisVimeoTranscript')
+      .filter('sanitize', ['$sce', function ($sce) {
+        return function (htmlCode) {
+          return $sce.trustAsHtml(htmlCode);
+        }
+
+      }])
+      .filter('trusted', ['$sce', function ($sce) {
+        return function(url) {
+          return $sce.trustAsResourceUrl(url);
+        };
+      }])
+      .filter('milisecondsToDateTime', [function() {
+        return function(miliseconds) {
+          return new Date(1970, 0, 1).setSeconds(miliseconds/1000);
+        };
+      }]);
 
 }());

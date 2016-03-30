@@ -1,7 +1,8 @@
+$corporateWhite : rgb(242,242,242);
 
 .elseisTranscript {
   background-color: #212121;
-  color: #b7b7b7;
+  color: $corporateWhite;
   .logo {
     background-color: black;
     img {
@@ -27,18 +28,18 @@
       padding: 20px 0 20px 0;
     }
     .etLangSelection {
-      border-bottom: 1px solid #969696;
-      border-top: 1px solid #969696;
+      border-bottom: 1px solid $corporateWhite;
+      border-top: 1px solid $corporateWhite;
 
       .etLangDesc {
         display: block;
-        color: #9b9b9b;
+        color: $corporateWhite;
         padding: 10px 5px 10px 5px;
       }
       .etLangOption {
         display: block;
         padding: 10px;
-        color: white;
+        color: $corporateWhite;
       }
     }
 

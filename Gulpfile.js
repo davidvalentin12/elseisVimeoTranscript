@@ -58,9 +58,9 @@
 
     SERVER_PORT: 9001,
     SERVER_LIVE_RELOAD: false,
-    SERVER_LIVE_RELOAD_FILES: './src/**/*'
+    SERVER_LIVE_RELOAD_FILES: './src/**/*',
 
-
+    TEMPLATES_MODULE : 'elseisTemplates'
   }, COMPONENT = {
     name: 'example',
     ready: false
@@ -81,6 +81,7 @@
     CONFIG.DIST_PATH,
     './.bowerrc',
       '/.gitignore',
+      './dist',
     './bower.json',
     './Gulpfile.js',
     './index.html',
@@ -399,7 +400,7 @@
           useShortDoctype: true
         }))
         .pipe(ngHtml2Js({
-          moduleName: 'dvm.templates',
+          moduleName:CONFIG.TEMPLATES_MODULE,
           prefix: 'src/templates/'
         }))
         .pipe(concat(COMPONENT.name + '.templates.js'))

@@ -3,6 +3,7 @@
 
 
   angular.module('elseisVimeoTranscript', [
+    //'elseisTemplates'
   ]);
 
 }());

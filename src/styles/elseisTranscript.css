@@ -1,6 +1,6 @@
 .elseisTranscript {
   background-color: #212121;
-  color: #b7b7b7; }
+  color: #f2f2f2; }
   .elseisTranscript .logo {
     background-color: black; }
     .elseisTranscript .logo img {
@@ -20,16 +20,16 @@
     .elseisTranscript .etTranscriptDisplay .etLangTitle {
       padding: 20px 0 20px 0; }
     .elseisTranscript .etTranscriptDisplay .etLangSelection {
-      border-bottom: 1px solid #969696;
-      border-top: 1px solid #969696; }
+      border-bottom: 1px solid #f2f2f2;
+      border-top: 1px solid #f2f2f2; }
       .elseisTranscript .etTranscriptDisplay .etLangSelection .etLangDesc {
         display: block;
-        color: #9b9b9b;
+        color: #f2f2f2;
         padding: 10px 5px 10px 5px; }
       .elseisTranscript .etTranscriptDisplay .etLangSelection .etLangOption {
         display: block;
         padding: 10px;
-        color: white; }
+        color: #f2f2f2; }
     .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph {
       width: 100%;
       float: left;

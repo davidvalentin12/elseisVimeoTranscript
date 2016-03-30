@@ -26,6 +26,7 @@
 
     <!-- inject:css -->
     <link rel="stylesheet" href="src/styles/elseisTranscript.css">
+    <link rel="stylesheet" href="src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/style.css">
     <!-- endinject -->
 
@@ -53,15 +54,15 @@
 
 <!-- inject:js -->
 <script src="src/scripts/elseisVimeoTranscript.js"></script>
+<script src="src/scripts/filters/elseisVimeoTranscriptFilters.js"></script>
 <script src="src/scripts/directives/elseisVimeoTranscript.js"></script>
 <script src="src/scripts/controllers/elseisVimeoTranscript.js"></script>
-<script src="src/scripts/filters/elseisVimeoTranscriptFilters.js"></script>
 <!-- endinject-->
-
-
-<!-- <script src="dist/elseisVimeoTranscript.min.js"></script>
+<!--
 <script src="dist/elseisVimeoTranscript.templates.min.js"></script>
-<link rel="stylesheet" href="dist/css/styles.min.css"> -->
+
+ <script src="dist/elseisVimeoTranscript.min.js"></script>
+<link rel="stylesheet" href="dist/css/styles.min.css">-->
 <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 </body>
 <script type="text/javascript">
@@ -73,7 +74,7 @@
                             langOptions :[
                                 {
                                     lang: 'English',
-                                    transcriptUrl: '_data/elseisTranscript.json'
+                                    transcriptUrl: '_data/elseisTranscriptData.json'
                                 },
                                 {
                                     lang: 'Spanish',

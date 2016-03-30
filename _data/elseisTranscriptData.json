@@ -1,49 +1,59 @@
-[
-  {
-    "paragraphNum":1,
-    "time":"00:12",
-    "fragments":[
-      {
-        "startTime":2,
-        "endTime":5,
-        "text": "Hello. My name is Matthew Williams, and I am a champion."
-      },
-      {
-        "startTime":5,
-        "endTime":8,
-        "text": "I have won medals in three different sports and national games in Canada,"
-      },
-      {
-        "startTime":8,
-        "endTime":12,
-        "text": "competed at the international level in basketball and was proud to represent Canada on the world stage."
-      }
-    ]
-  },
-  {
-    "paragraphNum":2,
-    "time":"00:38",
-    "fragments":[
-      {
-        "startTime":38,
-        "endTime":45,
-        "text": "I train five days a week for basketball and speed skating,"
-      },
-      {
-        "startTime":45,
-        "endTime":50,
-        "text": " work with top quality coaches and mental performance consultants to be at my best in my sport."
-      },
-      {
-        "startTime":50,
-        "endTime":55,
-        "text": "By the way, all that is through Special Olympics"
-      },
-      {
-        "startTime":55,
-        "endTime":60,
-        "text": "Does that change the way you think of me and my accomplishments?"
-      }
-    ]
-  }
-]
+[{"paragraphNum":1,"time":"0","fragments":[
+{"startTime":25,"endTime":27,"text": "Carlos (Tomás).- ¡Gerundio!<br>"},
+{"startTime":30,"endTime":31,"text": "Gerundio (Cervantes).- ¿Señor?<br>"},
+{"startTime":32,"endTime":33,"text": "Carlos.-  ¿Es hora?<br>"},
+{"startTime":33,"endTime":37,"text": "Gerundio.-¿Cuánto va que sale ahora|con que se ha quebrado un asa?<br>"},
+{"startTime":37,"endTime":39,"text": "Carlos.-  ¿Hay algo en que tropezar?<br>"},
+{"startTime":40,"endTime":42,"text": "Gerundio.-  Todo está llano, Señor.<br>"},
+{"startTime":42,"endTime":43,"text": "Carlos.-  Míralo.<br>"},
+{"startTime":43,"endTime":45,"text": "Gerundio.-  Pierde el temor.<br>"},
+{"startTime":45,"endTime":47,"text": "Carlos.-  Tú has de venirme a quebrar.<br>"}
+]},
+{"paragraphNum":2,"time":"48116","fragments":[
+{"startTime":48,"endTime":51,"text": "Gerundio.-  Esos temores ataja;|que de ti cuidando estoy,"},
+{"startTime":51,"endTime":54,"text": "y he hecho, porque salgas, hoy|una vasera de paja"},
+{"startTime":55,"endTime":58,"text": "llena de algodón.|¿Quieres venirte a envasar?<br>"},
+{"startTime":59,"endTime":60,"text": "Carlos.-  ¡Ay de mí!<br>"},
+{"startTime":60,"endTime":62,"text": "Gerundio.-  Señor, ¿qué te ha sucedido?<br>"},
+{"startTime":62,"endTime":64,"text": "Carlos.-  Es que me he dado un porrazo.<br>"},
+{"startTime":64,"endTime":65,"text": "Gerundio.-  ¿Te has quebrado algún pedazo?<br>"},
+{"startTime":66,"endTime":68,"text": "Carlos.-  No, mas pienso que me he hendido.<br>"},
+{"startTime":69,"endTime":71,"text": "Gerundio.-  Pues bebe un trago siquiera.<br>"}
+]},
+{"paragraphNum":3,"time":"71732","fragments":[
+{"startTime":71,"endTime":73,"text": "Carlos.-  Pues ¿qué importa en casos tales?<br>"},
+{"startTime":73,"endTime":75,"text": "Gerundio.-  Para mirar si te sales,"},
+{"startTime":76,"endTime":80,"text": "te pondré un poco de cera;"},
+{"startTime":82,"endTime":85,"text": "que hoy el vidrio es menester"},
+{"startTime":85,"endTime":89,"text": "que esté sano, porque estoy|para ir a mil casas hoy,"},
+{"startTime":89,"endTime":90,"text": "que en ti desean beber.<br>"},
+{"startTime":91,"endTime":91,"text": "Carlos.-  ¿Dónde?<br>"},
+{"startTime":91,"endTime":96,"text": "Gerundio.-  A palacio, y pasadas|de treinta o cuarenta bodas;"},
+{"startTime":96,"endTime":100,"text": "y te han de llenar en todas|de bebidas regaladas.<br>"}
+]},
+{"paragraphNum":4,"time":"100488","fragments":[
+{"startTime":100,"endTime":104,"text": "Carlos.-  Pues vamos sin dilación,|y llévame paso a paso.<br>"},
+{"startTime":110,"endTime":115,"text": "Cervantes.- ¿Y quién dices que esto ha escrito?<br>"},
+{"startTime":115,"endTime":119,"text": "Tomás.- Un tal Agustín Moreto, famoso comediógrafo; y sacerdote como Don Lope."},
+{"startTime":119,"endTime":121,"text": "Nacido poco después que murierais vos.<br>"},
+{"startTime":121,"endTime":123,"text": "Cervantes.- ¿Y se titula?<br>"},
+{"startTime":123,"endTime":125,"text": "Tomás.- El Licenciado Vidriera.<br>"},
+{"startTime":125,"endTime":127,"text": "Cervantes.- Como mi novela.<br>"},
+{"startTime":127,"endTime":129,"text": "Tomás.- O como yo. Que yo también tengo nombre.<br>"},
+{"startTime":129,"endTime":132,"text": "Cervantes.- Será caradura el Moreto ese.<br>"},
+{"startTime":132,"endTime":136,"text": "Tomás.- Pero lo subtitula “Las fortunas de Carlos” y apenas sigue nuestra historia.<br>"},
+{"startTime":136,"endTime":137,"text": "Cervantes.- ¿Y quién es Carlos?<br>"},
+{"startTime":137,"endTime":139,"text": "Tomás.- Desde luego no soy yo.<br>"}
+]},
+{"paragraphNum":5,"time":"140067","fragments":[
+{"startTime":140,"endTime":142,"text": "Cervantes.- Porque tú, ¿seguirás siendo Tomás?"},
+{"startTime":142,"endTime":144,"text": "Tomás.- Más o menos. Eso espero.<br>"},
+{"startTime":146,"endTime":149,"text": "Cervantes.- Y dices que le fue bien en el teatro.<br>"},
+{"startTime":149,"endTime":152,"text": "Tomás.- Un autor de éxito."},
+{"startTime":152,"endTime":155,"text": "Ya os veo la cara llena de envidia.<br>"},
+{"startTime":155,"endTime":159,"text": "Cervantes.- Envidia yo, el autor del Don Quijote y…"},
+{"startTime":159,"endTime":161,"text": "y El Licenciado Vidriera,"},
+{"startTime":161,"endTime":163,"text": "porque el autor de El Licenciado Vidriera soy yo y no él.<br>"},
+{"startTime":163,"endTime":165,"text": "Tomás.- Pero no triunfasteis en el teatro."},
+{"startTime":167,"endTime":169,"text": "Cervantes.- No, eso no."}
+]}]

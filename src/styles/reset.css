@@ -1,48 +1,4 @@
 .elseisTranscript {
-  background-color: #212121;
-  color: #f2f2f2; }
-  .elseisTranscript .logo {
-    background-color: black; }
-    .elseisTranscript .logo img {
-      width: 85px;
-      margin: 0 auto; }
-  .elseisTranscript .etCenter {
-    width: 85px;
-    margin: 0 auto; }
-  .elseisTranscript .etRow {
-    width: 80%;
-    margin: 0 auto; }
-  .elseisTranscript .etTranscriptDisplay {
-    margin-top: 50px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: table; }
-    .elseisTranscript .etTranscriptDisplay .etLangTitle {
-      padding: 20px 0 20px 0; }
-    .elseisTranscript .etTranscriptDisplay .etLangSelection {
-      border-bottom: 1px solid #f2f2f2;
-      border-top: 1px solid #f2f2f2; }
-      .elseisTranscript .etTranscriptDisplay .etLangSelection .etLangDesc {
-        display: block;
-        color: #f2f2f2;
-        padding: 10px 5px 10px 5px; }
-      .elseisTranscript .etTranscriptDisplay .etLangSelection .etLangOption {
-        display: block;
-        padding: 10px;
-        color: #f2f2f2; }
-    .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph {
-      width: 100%;
-      float: left;
-      min-height: 40px;
-      padding: 10px 0 0 0; }
-      .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphTime {
-        padding: 10px 5px 10px 5px;
-        display: table-cell;
-        text-align: center; }
-      .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText {
-        padding: 10px 0 10px 0; }
-
-.elseisTranscript {
   /* HTML RESET */
   /*  GRID 12 COL   ============================================================================= */
   /*  100% WIDTH AT 860 */ }
@@ -173,27 +129,3 @@
       width: 100%; }
     .elseisTranscript .span_1_of_12 {
       width: 100%; } }
-
-.elseisTranscript .flt-right {
-  float: right; }
-
-.elseisTranscript .flt-left {
-  float: left; }
-
-.elseisTranscript .embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; }
-  .elseisTranscript .embed-container .controls-wrapper .title {
-    display: none !important; }
-  .elseisTranscript .embed-container .controls-wrapper .sidedock {
-    display: none !important; }
-
-.elseisTranscript .embed-container iframe, .elseisTranscript .embed-container object, .elseisTranscript .embed-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
