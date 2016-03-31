@@ -1,6 +1,6 @@
 <div class="videoContainer"
      ng-class="
-     {'fixedVideo':false,'span_3_of_12':false}">
+     {'fixedVideo':elseisVimeoTranscriptCtrl.videoFixed,'span_3_of_12_always':elseisVimeoTranscriptCtrl.videoFixed}">
     <div class='embed-container'>
         <iframe
                 id="player1"
@@ -21,7 +21,10 @@
 
         <div class="videoControlBox leftbrd  rightbrd flt-right  span_1_of_12_always"><i class="fa fa-file-text"></i>
         </div>
-        <div class="videoControlBox leftbrd flt-right span_1_of_12_always"><i class="fa fa-reply"></i></div>
+        <div class="videoControlBox leftbrd flt-right span_1_of_12_always" ng-init="elseisVimeoTranscriptCtrl.videoFixed=false" ng-click="(elseisVimeoTranscriptCtrl.videoFixed) ? elseisVimeoTranscriptCtrl.videoFixed=false: elseisVimeoTranscriptCtrl.videoFixed=true">
+            <i class="fa fa-share" ng-if="elseisVimeoTranscriptCtrl.videoFixed"></i>
+            <i class="fa fa-reply" ng-if="!elseisVimeoTranscriptCtrl.videoFixed"></i>
+        </div>
 
     </section>
 </div>

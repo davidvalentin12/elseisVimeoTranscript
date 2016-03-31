@@ -1,14 +1,6 @@
 .elseisTranscript {
   background-color: #212121;
   color: #f2f2f2; }
-  .elseisTranscript .logo {
-    background-color: black; }
-    .elseisTranscript .logo img {
-      width: 85px;
-      margin: 0 auto; }
-  .elseisTranscript .etCenter {
-    width: 85px;
-    margin: 0 auto; }
   .elseisTranscript .etRow {
     width: 80%;
     margin: 0 auto; }
