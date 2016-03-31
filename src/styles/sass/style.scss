@@ -11,22 +11,48 @@
   .flt-left {
     float: left;
   }
-
-  .embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    .controls-wrapper {
-      .title {
-        display: none !important;
+  .videoContainer{
+  height:auto;
+    &.fixedVideo{
+      position:fixed;
+      top:30px;
+    }
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      .controls-wrapper {
+        .title {
+          display: none !important;
+        }
+        .sidedock {
+          display: none !important;
+        }
       }
-      .sidedock {
-        display: none !important;
+
+    }
+    .etVideoControls {
+      border-bottom: 1px solid #969696;
+      border-top: 1px solid #969696;
+      height: 60px;
+      overflow: hidden;
+      display:table;
+      .videoControlBox {
+        display:table-cell;
+        text-align: center;
+        &.leftbrd {
+          border-left: 1px solid #969696;
+        }
+        &.rightbrd {
+          border-right: 1px solid #969696;
+        }
+
       }
     }
   }
+
 
   .embed-container iframe, .embed-container object, .embed-container embed {
     position: absolute;

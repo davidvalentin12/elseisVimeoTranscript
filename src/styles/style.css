@@ -13,7 +13,6 @@
     width: 80%;
     margin: 0 auto; }
   .elseisTranscript .etTranscriptDisplay {
-    margin-top: 50px;
     padding-top: 40px;
     padding-bottom: 40px;
     display: table; }
@@ -45,6 +44,7 @@
 .elseisTranscript {
   /* HTML RESET */
   /*  GRID 12 COL   ============================================================================= */
+  /*  GRID 12 COL ALWAYS  ============================================================================= */
   /*  100% WIDTH AT 860 */ }
   .elseisTranscript html, .elseisTranscript body, .elseisTranscript div, .elseisTranscript span, .elseisTranscript object, .elseisTranscript iframe,
   .elseisTranscript h1, .elseisTranscript h2, .elseisTranscript h3, .elseisTranscript h4, .elseisTranscript h5, .elseisTranscript h6, .elseisTranscript p, .elseisTranscript blockquote, .elseisTranscript pre,
@@ -148,6 +148,30 @@
     width: 15.33%; }
   .elseisTranscript .span_1_of_12 {
     width: 6.86%; }
+  .elseisTranscript .span_12_of_12_always {
+    width: 100%; }
+  .elseisTranscript .span_11_of_12_always {
+    width: 91.53%; }
+  .elseisTranscript .span_10_of_12_always {
+    width: 83.06%; }
+  .elseisTranscript .span_9_of_12_always {
+    width: 74.6%; }
+  .elseisTranscript .span_8_of_12_always {
+    width: 66.13%; }
+  .elseisTranscript .span_7_of_12_always {
+    width: 57.66%; }
+  .elseisTranscript .span_6_of_12_always {
+    width: 49.2%; }
+  .elseisTranscript .span_5_of_12_always {
+    width: 40.73%; }
+  .elseisTranscript .span_4_of_12_always {
+    width: 32.26%; }
+  .elseisTranscript .span_3_of_12_always {
+    width: 23.8%; }
+  .elseisTranscript .span_2_of_12_always {
+    width: 15.33%; }
+  .elseisTranscript .span_1_of_12_always {
+    width: 6.86%; }
   @media only screen and (max-width: 860px) {
     .elseisTranscript .span_12_of_12 {
       width: 100%; }
@@ -180,16 +204,34 @@
 .elseisTranscript .flt-left {
   float: left; }
 
-.elseisTranscript .embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; }
-  .elseisTranscript .embed-container .controls-wrapper .title {
-    display: none !important; }
-  .elseisTranscript .embed-container .controls-wrapper .sidedock {
-    display: none !important; }
+.elseisTranscript .videoContainer {
+  height: auto; }
+  .elseisTranscript .videoContainer.fixedVideo {
+    position: fixed;
+    top: 30px; }
+  .elseisTranscript .videoContainer .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%; }
+    .elseisTranscript .videoContainer .embed-container .controls-wrapper .title {
+      display: none !important; }
+    .elseisTranscript .videoContainer .embed-container .controls-wrapper .sidedock {
+      display: none !important; }
+  .elseisTranscript .videoContainer .etVideoControls {
+    border-bottom: 1px solid #969696;
+    border-top: 1px solid #969696;
+    height: 60px;
+    overflow: hidden;
+    display: table; }
+    .elseisTranscript .videoContainer .etVideoControls .videoControlBox {
+      display: table-cell;
+      text-align: center; }
+      .elseisTranscript .videoContainer .etVideoControls .videoControlBox.leftbrd {
+        border-left: 1px solid #969696; }
+      .elseisTranscript .videoContainer .etVideoControls .videoControlBox.rightbrd {
+        border-right: 1px solid #969696; }
 
 .elseisTranscript .embed-container iframe, .elseisTranscript .embed-container object, .elseisTranscript .embed-container embed {
   position: absolute;

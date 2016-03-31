@@ -1,13 +1,27 @@
+<div class="videoContainer"
+     ng-class="
+     {'fixedVideo':false,'span_3_of_12':false}">
+    <div class='embed-container'>
+        <iframe
+                id="player1"
+                src="{{elseisVimeoTranscriptCtrl.transcriptConfig.videoUrl+'?api=1&player_id=player1&portrait=0&color=333&title=0&badge=0' | trusted}}"
+                frameborder="0"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen></iframe>
+    </div>
+    <section class="etVideoControls span_12_of_12">
+            <label ng-click=""
+                   class="videoControlBox leftbrd flt-left span_1_of_12_always">PL</label>
+            <label ng-click=""
+                   class="videoControlBox leftbrd flt-left span_1_of_12_always">VL</label>
+            <label class="videoControlBox rightbrd leftbrd flt-right span_1_of_12_always">FS</label>
+            <label class="videoControlBox leftbrd flt-right span_1_of_12_always">TRS</label>
+            <label class="videoControlBox leftbrd flt-right span_1_of_12_always">SB</label>
 
-<div class='embed-container'>
-    <iframe
-            id="player1"
-            src="{{elseisVimeoTranscriptCtrl.transcriptConfig.videoUrl+'?api=1&player_id=player1&portrait=0&color=333&title=0&badge=0' | trusted}}"
-            frameborder="0"
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowfullscreen></iframe>
+    </section>
 </div>
+
 
 <section class="etTranscriptDisplay etRow">
 
