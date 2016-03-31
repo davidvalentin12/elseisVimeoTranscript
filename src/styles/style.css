@@ -200,8 +200,14 @@
   background-color: #212121;
   height: auto; }
   .elseisTranscript .videoContainer.fixedVideo {
+    min-width: 200px;
     position: fixed;
-    top: 30px; }
+    top: 9%;
+    left: 9%; }
+    @media only screen and (max-width: 860px) {
+      .elseisTranscript .videoContainer.fixedVideo {
+        left: inherit;
+        right: 9%; } }
   .elseisTranscript .videoContainer .embed-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -223,7 +229,8 @@
       text-align: center;
       vertical-align: center;
       line-height: 40px;
-      height: 40px; }
+      height: 40px;
+      min-width: 40px; }
       .elseisTranscript .videoContainer .etVideoControls .videoControlBox.leftbrd {
         border-left: 1px solid #969696; }
       .elseisTranscript .videoContainer .etVideoControls .videoControlBox.rightbrd {

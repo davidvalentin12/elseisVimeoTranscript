@@ -1,14 +1,6 @@
 .elseisTranscript {
   background-color: #212121;
   color: #f2f2f2; }
-  .elseisTranscript .logo {
-    background-color: black; }
-    .elseisTranscript .logo img {
-      width: 85px;
-      margin: 0 auto; }
-  .elseisTranscript .etCenter {
-    width: 85px;
-    margin: 0 auto; }
   .elseisTranscript .etRow {
     width: 80%;
     margin: 0 auto; }
@@ -176,14 +168,6 @@
 .elseisTranscript {
   background-color: #212121;
   color: #f2f2f2; }
-  .elseisTranscript .logo {
-    background-color: black; }
-    .elseisTranscript .logo img {
-      width: 85px;
-      margin: 0 auto; }
-  .elseisTranscript .etCenter {
-    width: 85px;
-    margin: 0 auto; }
   .elseisTranscript .etRow {
     width: 80%;
     margin: 0 auto; }
@@ -380,10 +364,17 @@
   float: left; }
 
 .elseisTranscript .videoContainer {
+  background-color: #212121;
   height: auto; }
   .elseisTranscript .videoContainer.fixedVideo {
+    min-width: 200px;
     position: fixed;
-    top: 30px; }
+    top: 9%;
+    left: 9%; }
+    @media only screen and (max-width: 860px) {
+      .elseisTranscript .videoContainer.fixedVideo {
+        left: inherit;
+        right: 9%; } }
   .elseisTranscript .videoContainer .embed-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -397,12 +388,16 @@
   .elseisTranscript .videoContainer .etVideoControls {
     border-bottom: 1px solid #969696;
     border-top: 1px solid #969696;
-    height: 60px;
+    height: 40px;
     overflow: hidden;
     display: table; }
     .elseisTranscript .videoContainer .etVideoControls .videoControlBox {
       display: table-cell;
-      text-align: center; }
+      text-align: center;
+      vertical-align: center;
+      line-height: 40px;
+      height: 40px;
+      min-width: 40px; }
       .elseisTranscript .videoContainer .etVideoControls .videoControlBox.leftbrd {
         border-left: 1px solid #969696; }
       .elseisTranscript .videoContainer .etVideoControls .videoControlBox.rightbrd {

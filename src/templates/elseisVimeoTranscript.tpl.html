@@ -11,13 +11,12 @@
                 allowfullscreen></iframe>
     </div>
     <section class="etVideoControls span_12_of_12">
-        <div class="videoControlBox leftbrd flt-left span_1_of_12_always">
+        <div class="videoControlBox leftbrd rightbrd flt-left span_1_of_12_always"
+             ng-click="(elseisVimeoTranscriptCtrl.player.isPlaying) ? elseisVimeoTranscriptCtrl.player.pause() : elseisVimeoTranscriptCtrl.player.play()">
+            <i class="fa fa-play" ng-if="!elseisVimeoTranscriptCtrl.player.isPlaying"></i>
+            <i class="fa fa-pause" ng-if="elseisVimeoTranscriptCtrl.player.isPlaying"></i>
+        </div>
 
-            <i class="fa fa-play"></i> <i class="fa fa-pause"></i>
-        </div>
-        <div ng-click="" class="videoControlBox leftbrd flt-left span_1_of_12_always">
-            <i class="fa fa-arrows-alt"></i>
-        </div>
 
         <div class="videoControlBox leftbrd  rightbrd flt-right  span_1_of_12_always"><i class="fa fa-file-text"></i>
         </div>
