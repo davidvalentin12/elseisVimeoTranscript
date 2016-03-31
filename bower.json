@@ -30,8 +30,15 @@
   ],
   "dependencies": {
     "angular": "~1.5.0",
-    "jquery": "^2.2.2"
+    "jquery": "^2.2.2",
+    "font-awesome": "~4.5.0"
   },
-  "overrides": {},
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    }
+  },
   "devDependencies": {}
 }

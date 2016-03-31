@@ -222,12 +222,15 @@
   .elseisTranscript .videoContainer .etVideoControls {
     border-bottom: 1px solid #969696;
     border-top: 1px solid #969696;
-    height: 60px;
+    height: 40px;
     overflow: hidden;
     display: table; }
     .elseisTranscript .videoContainer .etVideoControls .videoControlBox {
       display: table-cell;
-      text-align: center; }
+      text-align: center;
+      vertical-align: center;
+      line-height: 40px;
+      height: 40px; }
       .elseisTranscript .videoContainer .etVideoControls .videoControlBox.leftbrd {
         border-left: 1px solid #969696; }
       .elseisTranscript .videoContainer .etVideoControls .videoControlBox.rightbrd {
