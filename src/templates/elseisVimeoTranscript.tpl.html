@@ -1,4 +1,4 @@
-<div class="videoContainer"
+<div class="videoContainer etRow"
      ng-class="
      {'fixedVideo':elseisVimeoTranscriptCtrl.videoFixed,'span_3_of_12_always':elseisVimeoTranscriptCtrl.videoFixed}">
     <div class='embed-container'>
@@ -11,39 +11,69 @@
                 allowfullscreen></iframe>
     </div>
     <section class="etVideoControls span_12_of_12">
-        <div class="videoControlBox leftbrd rightbrd flt-left span_1_of_12_always"
+        <div class="videoControlBox leftbrd rightbrd flt-left "
              ng-click="(elseisVimeoTranscriptCtrl.player.isPlaying) ? elseisVimeoTranscriptCtrl.player.pause() : elseisVimeoTranscriptCtrl.player.play()">
             <i class="fa fa-play" ng-if="!elseisVimeoTranscriptCtrl.player.isPlaying"></i>
             <i class="fa fa-pause" ng-if="elseisVimeoTranscriptCtrl.player.isPlaying"></i>
         </div>
-
-
-        <div class="videoControlBox leftbrd  rightbrd flt-right  span_1_of_12_always" id="elseisVerFicha"><i class="fa fa-file-text"></i>
+        <div class="videoControlBox flt-left etVideoTitle"
+             ng-attr-title="{{elseisVimeoTranscriptCtrl.transcriptConfig.videoTitle}}"
+             ng-class="
+     {'etVideoFixed':elseisVimeoTranscriptCtrl.videoFixed,}"
+                ><span>
+    {{elseisVimeoTranscriptCtrl.transcriptConfig.videoTitle}}</span>
         </div>
-        <div class="videoControlBox leftbrd flt-right span_1_of_12_always" ng-init="elseisVimeoTranscriptCtrl.videoFixed=false" ng-click="(elseisVimeoTranscriptCtrl.videoFixed) ? elseisVimeoTranscriptCtrl.videoFixed=false: elseisVimeoTranscriptCtrl.videoFixed=true">
+
+        <div class="videoControlBox leftbrd  rightbrd flt-right  " id="elseisVerFicha"><i class="fa fa-file-text"></i>
+        </div>
+        <div class="videoControlBox leftbrd flt-right "
+             ng-attr-title="{{(elseisVimeoTranscriptCtrl.videoFixed==false ? (elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Fijar video' : 'Pin video'): (elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'No fijar video' : 'Unpin video'))}}"
+             ng-click="(elseisVimeoTranscriptCtrl.videoFixed) ? elseisVimeoTranscriptCtrl.videoFixed=false: elseisVimeoTranscriptCtrl.videoFixed=true">
             <i class="fa fa-share" ng-if="elseisVimeoTranscriptCtrl.videoFixed"></i>
             <i class="fa fa-reply" ng-if="!elseisVimeoTranscriptCtrl.videoFixed"></i>
+        </div>
+        <div class="videoControlBox leftbrd flt-right"
+             ng-attr-title="{{(elseisVimeoTranscriptCtrl.autoScroll==false ? (elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Activar scroll automático' : 'Enable automatic scroll'): (elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Desactivar scroll automático' : 'Disable automatic scroll'))}}"
+             ng-if="elseisVimeoTranscriptCtrl.videoFixed"
+             ng-click="(elseisVimeoTranscriptCtrl.autoScroll) ? elseisVimeoTranscriptCtrl.autoScroll=false: elseisVimeoTranscriptCtrl.autoScroll=true">
+            <i class=" fa fa-chain-broken" ng-if="elseisVimeoTranscriptCtrl.autoScroll"></i>
+            <i class="fa fa-chain" ng-if="!elseisVimeoTranscriptCtrl.autoScroll"></i>
         </div>
 
     </section>
 </div>
 
 
-<section class="etTranscriptDisplay etRow">
+<section class="etTranscriptDisplay etRow"
+         ng-class="
+     {'fixedVideoPaddning':elseisVimeoTranscriptCtrl.videoFixed}"
+        >
 
 
     <!--Transcription/subtitles lang menu-->
-    <aside class="span_3_of_12 flt-left">
+    <aside class="span_3_of_12 flt-left" ng-if="!elseisVimeoTranscriptCtrl.videoFixed">
         <header>
-            <h3 class="etLangTitle" ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Subtitulos y transcripción' : 'Subtitules and transcript')"></h3>
+            <h3 class="etLangTitle"
+                ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Subtitulos y transcripción' : 'Subtitules and transcript')"></h3>
         </header>
-        <main class="etLangSelection">
-            <span class="etLangDesc" ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Seleccionar idioma' : 'Select Language')"></span>
+        <section class="etLangSelection">
+            <span class="etLangDesc"
+                  ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Seleccionar idioma' : 'Select Language')"></span>
             <span class="etLangOption" ng-repeat="option in elseisVimeoTranscriptCtrl.transcriptLangOptions"
                   ng-click="elseisVimeoTranscriptCtrl.selectedLang = option.id"
                   ng-style=" {'font-weight' : elseisVimeoTranscriptCtrl.selectedLang == option.id ? ' bold' : 'inherit' }"
-            >{{option.id}}</span>
-        </main>
+                    >{{option.id}}</span>
+        </section>
+        <section class="etFontSize">
+            <span class="etFontSizeDesc span_6_of_12_always"
+                  ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Tamaño de letra' : 'Text size')"></span>
+            <span class="span_3_of_12_always plusSize" ng-click="elseisVimeoTranscriptCtrl.plusFontSize()">
+                <i class="fa fa-plus-square"></i>
+            </span>
+            <span class="span_3_of_12_always minusSize" ng-click="elseisVimeoTranscriptCtrl.minusFontSize()">
+                <i class="fa fa-minus-square"></i>
+            </span>
+        </section>
     </aside>
 
     <!-- Transcription -->
@@ -56,11 +86,12 @@
             </div>
             <p class="etParagraphText span_10_of_12 flt-right">
                 <span class="etFragment"
-
+                      id="scrollTo{{ textFragment.startTime | milisecondsToSeconds}}"
                       ng-repeat="textFragment in paragraph.fragments"
                       ng-click="elseisVimeoTranscriptCtrl.player.seekTo(textFragment.startTime/1000)"
                       ng-style=" {'text-decoration' : (textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+500 &&
-                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-500 )? ' underline' : 'inherit' }"
+                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-500 )? ' underline' : 'inherit', 'font-size':elseisVimeoTranscriptCtrl.transcriptFontSize+'%' }"
+
                       ng-bind-html="textFragment.text | verticalSlashToSpace | sanitize">
                     </span>
             </p>

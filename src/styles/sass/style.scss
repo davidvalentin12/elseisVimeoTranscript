@@ -13,14 +13,16 @@
   .videoContainer {
     background-color: #212121;
     height: auto;
+
     &.fixedVideo {
       min-width: 200px;
       position: fixed;
       top: 9%;
       left: 9%;
       @media only screen and (max-width: 860px) {
-        left: inherit;
-        right: 9%;
+        left: 9%;
+        top: inherit;
+        width:82%;
       }
     }
     .embed-container {
@@ -46,9 +48,17 @@
       overflow: hidden;
       display: table;
       .videoControlBox {
+        cursor:pointer;
+        &.etVideoTitle{
+          width:calc(100% - 160px);
+          padding: 0 15px 0 15px ;
+          cursor:auto;
+          &.etVideoFixed{
+            display:none;
+          }
+        }
         display: table-cell;
         text-align: center;
-        vertical-align: center;
         line-height: 40px;
         height: 40px;
         min-width: 40px;
@@ -62,7 +72,6 @@
       }
     }
   }
-
   .embed-container iframe, .embed-container object, .embed-container embed {
     position: absolute;
     top: 0;
@@ -71,7 +80,6 @@
     height: 100%;
 
   }
-
 }
 
 

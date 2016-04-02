@@ -24,5 +24,9 @@
                     return text.replace('|', ' ');
                 }
             };
+        }]).filter('milisecondsToSeconds', [function () {
+            return function (miliseconds) {
+                return parseInt(miliseconds/1000);
+            };
         }]);
 }());

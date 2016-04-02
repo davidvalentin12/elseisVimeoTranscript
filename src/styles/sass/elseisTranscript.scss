@@ -7,6 +7,17 @@ $corporateWhite : rgb(242,242,242);
     width: 80%;
     margin: 0 auto;
   }
+  .fixedVideoPaddning{
+    @media only screen and (max-width: 860px) {
+      padding-top:56% !important;
+    }
+    @media only screen and (max-width: 760px) {
+      padding-top:60% !important;
+    }
+    @media only screen and (max-width: 560px) {
+      padding-top:64% !important;
+    }
+  }
 
   .etTranscriptDisplay {
     padding-top: 40px;
@@ -28,6 +39,26 @@ $corporateWhite : rgb(242,242,242);
         display: block;
         padding: 10px;
         color: $corporateWhite;
+
+        cursor:pointer;
+      }
+    }
+    .etFontSize {
+      border-bottom: 1px solid $corporateWhite;
+
+
+      .etFontSizeDesc {
+        color: $corporateWhite;
+        padding: 10px 5px 10px 5px;
+        display:inline-block;
+        width:50%;
+      }
+      .plusSize, .minusSize{
+        cursor:pointer;
+        display:table-cell;
+        text-align:center;
+        float:right;
+        padding: 10px 10px;
       }
     }
 
@@ -47,6 +78,7 @@ $corporateWhite : rgb(242,242,242);
 
           padding: 10px 0 10px 0;
           .etFragment{
+            cursor:pointer;
             margin-right:3px;
           }
 

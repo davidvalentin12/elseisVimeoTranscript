@@ -4,6 +4,15 @@
   .elseisTranscript .etRow {
     width: 80%;
     margin: 0 auto; }
+  @media only screen and (max-width: 860px) {
+    .elseisTranscript .fixedVideoPaddning {
+      padding-top: 56% !important; } }
+  @media only screen and (max-width: 760px) {
+    .elseisTranscript .fixedVideoPaddning {
+      padding-top: 60% !important; } }
+  @media only screen and (max-width: 560px) {
+    .elseisTranscript .fixedVideoPaddning {
+      padding-top: 64% !important; } }
   .elseisTranscript .etTranscriptDisplay {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -20,7 +29,21 @@
       .elseisTranscript .etTranscriptDisplay .etLangSelection .etLangOption {
         display: block;
         padding: 10px;
-        color: #f2f2f2; }
+        color: #f2f2f2;
+        cursor: pointer; }
+    .elseisTranscript .etTranscriptDisplay .etFontSize {
+      border-bottom: 1px solid #f2f2f2; }
+      .elseisTranscript .etTranscriptDisplay .etFontSize .etFontSizeDesc {
+        color: #f2f2f2;
+        padding: 10px 5px 10px 5px;
+        display: inline-block;
+        width: 50%; }
+      .elseisTranscript .etTranscriptDisplay .etFontSize .plusSize, .elseisTranscript .etTranscriptDisplay .etFontSize .minusSize {
+        cursor: pointer;
+        display: table-cell;
+        text-align: center;
+        float: right;
+        padding: 10px 10px; }
     .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph {
       width: 100%;
       float: left;
@@ -33,4 +56,5 @@
       .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText {
         padding: 10px 0 10px 0; }
         .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText .etFragment {
+          cursor: pointer;
           margin-right: 3px; }

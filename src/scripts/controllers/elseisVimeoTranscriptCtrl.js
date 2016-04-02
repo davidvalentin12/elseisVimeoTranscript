@@ -2,13 +2,14 @@
   'use strict';
 
   angular.module('elseisVimeoTranscript')
-      .controller('elseisVimeoTranscriptCtrl', function($scope, $http, $rootScope, $sce) {
+      .controller('elseisVimeoTranscriptCtrl', function($anchorScroll, $scope, $http, $location, $sce) {
         var self = this,
             iframe = $('#player1')[0];
 
         self.vimeoPlayer = $f(iframe);
         self.playerTime = 0;
-
+        self.videoFixed=false;
+        self.autoScroll=false;
         // When vimero player is ready
         self.vimeoPlayer.addEvent('ready', function() {
           //Add needed player events here
@@ -47,6 +48,19 @@
         };
         self.updatePlayerTime = function updatePlayerTime(data) {
           self.player.currentTime = data.seconds*1000;
+          if(self.videoFixed && self.autoScroll){
+            self.scrollToFragment(parseInt(data.seconds));
+          }
+          $scope.$digest();
+        };
+
+        self.scrollToFragment = function scrollToFragment(id){
+          var newHash = 'scrollTo' + id;
+          if ($location.hash() !== newHash) {
+            $location.hash(newHash);
+          } else {
+            $anchorScroll();
+          }
           $scope.$digest();
         };
 
@@ -62,6 +76,19 @@
           });
         });
 
+        self.transcriptFontSize = 100;
+        self.plusFontSize = function plusFontSize(){
+          if(self.transcriptFontSize<205) {
+            self.transcriptFontSize += 15;
+          }
+        };
+        self.minusFontSize = function minusFontSize(){
+          if(self.transcriptFontSize>75){
+            self.transcriptFontSize -= 15;
+          }
+        };
 
-      });
+      }).run(['$anchorScroll', function($anchorScroll) {
+        $anchorScroll.yOffset = 500;
+      }]);
 }());
