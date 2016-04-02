@@ -19,19 +19,17 @@
         });
 
         self.playerPaused = function playerPaused(){
-          console.log("paused");
           self.player.isPlaying = false;
           $scope.$digest();
         };
         self.playerLunched = function playerLunched(){
-          console.log("played");
           self.player.isPlaying = true;
           $scope.$digest();
         };
         self.player = {
           seekTo: function(seconds) {
             self.vimeoPlayer.api('seekTo', seconds);
-            self.player.currentTime = seconds;
+            self.player.currentTime = seconds*1000;
           },
           play: function(){
             self.vimeoPlayer.api('play');
@@ -48,7 +46,7 @@
           currentTime: 0
         };
         self.updatePlayerTime = function updatePlayerTime(data) {
-          self.player.currentTime = data.seconds;
+          self.player.currentTime = data.seconds*1000;
           $scope.$digest();
         };
 

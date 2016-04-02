@@ -32,6 +32,8 @@
         text-align: center; }
       .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText {
         padding: 10px 0 10px 0; }
+        .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText .etFragment {
+          margin-right: 3px; }
 
 .elseisTranscript {
   /* HTML RESET */

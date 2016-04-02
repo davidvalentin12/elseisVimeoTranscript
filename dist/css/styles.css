@@ -32,10 +32,13 @@
         text-align: center; }
       .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText {
         padding: 10px 0 10px 0; }
+        .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText .etFragment {
+          margin-right: 3px; }
 
 .elseisTranscript {
   /* HTML RESET */
   /*  GRID 12 COL   ============================================================================= */
+  /*  GRID 12 COL ALWAYS  ============================================================================= */
   /*  100% WIDTH AT 860 */ }
   .elseisTranscript html, .elseisTranscript body, .elseisTranscript div, .elseisTranscript span, .elseisTranscript object, .elseisTranscript iframe,
   .elseisTranscript h1, .elseisTranscript h2, .elseisTranscript h3, .elseisTranscript h4, .elseisTranscript h5, .elseisTranscript h6, .elseisTranscript p, .elseisTranscript blockquote, .elseisTranscript pre,
@@ -139,6 +142,30 @@
     width: 15.33%; }
   .elseisTranscript .span_1_of_12 {
     width: 6.86%; }
+  .elseisTranscript .span_12_of_12_always {
+    width: 100%; }
+  .elseisTranscript .span_11_of_12_always {
+    width: 91.53%; }
+  .elseisTranscript .span_10_of_12_always {
+    width: 83.06%; }
+  .elseisTranscript .span_9_of_12_always {
+    width: 74.6%; }
+  .elseisTranscript .span_8_of_12_always {
+    width: 66.13%; }
+  .elseisTranscript .span_7_of_12_always {
+    width: 57.66%; }
+  .elseisTranscript .span_6_of_12_always {
+    width: 49.2%; }
+  .elseisTranscript .span_5_of_12_always {
+    width: 40.73%; }
+  .elseisTranscript .span_4_of_12_always {
+    width: 32.26%; }
+  .elseisTranscript .span_3_of_12_always {
+    width: 23.8%; }
+  .elseisTranscript .span_2_of_12_always {
+    width: 15.33%; }
+  .elseisTranscript .span_1_of_12_always {
+    width: 6.86%; }
   @media only screen and (max-width: 860px) {
     .elseisTranscript .span_12_of_12 {
       width: 100%; }
@@ -199,6 +226,8 @@
         text-align: center; }
       .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText {
         padding: 10px 0 10px 0; }
+        .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText .etFragment {
+          margin-right: 3px; }
 
 .elseisTranscript {
   /* HTML RESET */

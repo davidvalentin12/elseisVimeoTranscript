@@ -35,10 +35,10 @@
     <!--Transcription/subtitles lang menu-->
     <aside class="span_3_of_12 flt-left">
         <header>
-            <h3 class="etLangTitle">Subtitles and transcript</h3>
+            <h3 class="etLangTitle" ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Subtitulos y transcripción' : 'Subtitules and transcript')"></h3>
         </header>
         <main class="etLangSelection">
-            <span class="etLangDesc">Select Language</span>
+            <span class="etLangDesc" ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Seleccionar idioma' : 'Select Language')"></span>
             <span class="etLangOption" ng-repeat="option in elseisVimeoTranscriptCtrl.transcriptLangOptions"
                   ng-click="elseisVimeoTranscriptCtrl.selectedLang = option.id"
                   ng-style=" {'font-weight' : elseisVimeoTranscriptCtrl.selectedLang == option.id ? ' bold' : 'inherit' }"
@@ -55,11 +55,13 @@
                 <span ng-bind="paragraph.time | milisecondsToDateTime | date:'mm:ss'"></span>
             </div>
             <p class="etParagraphText span_10_of_12 flt-right">
-                <span ng-repeat="textFragment in paragraph.fragments"
-                      ng-click="elseisVimeoTranscriptCtrl.player.seekTo(textFragment.startTime)"
-                      ng-style=" {'text-decoration' : (textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+0.5 &&
-                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-0.5 )? ' underline' : 'inherit' }"
-                      ng-bind-html="textFragment.text | sanitize">
+                <span class="etFragment"
+
+                      ng-repeat="textFragment in paragraph.fragments"
+                      ng-click="elseisVimeoTranscriptCtrl.player.seekTo(textFragment.startTime/1000)"
+                      ng-style=" {'text-decoration' : (textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+500 &&
+                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-500 )? ' underline' : 'inherit' }"
+                      ng-bind-html="textFragment.text | verticalSlashToSpace | sanitize">
                     </span>
             </p>
         </div>

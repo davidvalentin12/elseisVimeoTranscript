@@ -3,7 +3,7 @@
 
 
   angular.module('elseisVimeoTranscript', [
-    //'elseisTemplates'
+    'elseisTemplates'
   ]);
 
 }());
@@ -28,27 +28,6 @@
 
 }());
 
-(function () {
-  'use strict';
-
-
-  angular.module('elseisVimeoTranscript')
-      .filter('sanitize', ['$sce', function ($sce) {
-        return function (htmlCode) {
-          return $sce.trustAsHtml(htmlCode);
-        }
-      }])
-      .filter('trusted', ['$sce', function ($sce) {
-        return function(url) {
-          return $sce.trustAsResourceUrl(url);
-        };
-      }])
-      .filter('milisecondsToDateTime', [function() {
-        return function(miliseconds) {
-          return new Date(1970, 0, 1).setSeconds(miliseconds/1000);
-        };
-      }]);
-}());
 (function() {
   'use strict';
 
@@ -70,19 +49,17 @@
         });
 
         self.playerPaused = function playerPaused(){
-          console.log("paused");
           self.player.isPlaying = false;
           $scope.$digest();
         };
         self.playerLunched = function playerLunched(){
-          console.log("played");
           self.player.isPlaying = true;
           $scope.$digest();
         };
         self.player = {
           seekTo: function(seconds) {
             self.vimeoPlayer.api('seekTo', seconds);
-            self.player.currentTime = seconds;
+            self.player.currentTime = seconds*1000;
           },
           play: function(){
             self.vimeoPlayer.api('play');
@@ -99,7 +76,7 @@
           currentTime: 0
         };
         self.updatePlayerTime = function updatePlayerTime(data) {
-          self.player.currentTime = data.seconds;
+          self.player.currentTime = data.seconds*1000;
           $scope.$digest();
         };
 
@@ -117,4 +94,32 @@
 
 
       }]);
+}());
+(function () {
+    'use strict';
+
+
+    angular.module('elseisVimeoTranscript')
+        .filter('sanitize', ['$sce', function ($sce) {
+            return function (htmlCode) {
+                return $sce.trustAsHtml(htmlCode);
+            }
+        }])
+        .filter('trusted', ['$sce', function ($sce) {
+            return function (url) {
+                return $sce.trustAsResourceUrl(url);
+            };
+        }])
+        .filter('milisecondsToDateTime', [function () {
+            return function (miliseconds) {
+                return new Date(1970, 0, 1).setSeconds(miliseconds / 1000);
+            };
+        }])
+        .filter('verticalSlashToSpace', [function () {
+            return function (text) {
+                if (text) {
+                    return text.replace('|', ' ');
+                }
+            };
+        }]);
 }());
