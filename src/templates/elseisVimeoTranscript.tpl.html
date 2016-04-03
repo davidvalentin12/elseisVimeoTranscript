@@ -88,9 +88,10 @@
                 <span class="etFragment"
                       id="scrollTo{{ textFragment.startTime | milisecondsToSeconds}}"
                       ng-repeat="textFragment in paragraph.fragments"
+                      ng-class="{'selectedFragment':(textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+500 &&
+                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-500 )}"
                       ng-click="elseisVimeoTranscriptCtrl.player.seekTo(textFragment.startTime/1000)"
-                      ng-style=" {'text-decoration' : (textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+500 &&
-                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-500 )? ' underline' : 'inherit', 'font-size':elseisVimeoTranscriptCtrl.transcriptFontSize+'%' }"
+                      ng-style=" { 'font-size':elseisVimeoTranscriptCtrl.transcriptFontSize+'%' }"
 
                       ng-bind-html="textFragment.text | verticalSlashToSpace | sanitize">
                     </span>
