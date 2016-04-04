@@ -3,8 +3,8 @@
      ng-class="
      {'fixedVideo':elseisVimeoTranscriptCtrl.videoFixed,'span_3_of_12_always':elseisVimeoTranscriptCtrl.videoFixed}"
 
-ng-style=""
-     >
+     ng-style="{'top' : elseisVimeoTranscriptCtrl.videoFixed ? (elseisVimeoTranscriptCtrl.transcriptHeaderOffSet)+'px' : 'inherit' }"
+        >
     <div class='embed-container'>
         <iframe
                 id="player1"
@@ -23,8 +23,8 @@ ng-style=""
         <div class="videoControlBox flt-left etVideoTitle"
              ng-attr-title="{{elseisVimeoTranscriptCtrl.transcriptConfig.videoTitle}}"
              ng-class="
-     {'etVideoFixed':elseisVimeoTranscriptCtrl.videoFixed,}"
-        ><span>
+     {'etVideoFixed':elseisVimeoTranscriptCtrl.videoFixed}"
+                ><span>
     {{elseisVimeoTranscriptCtrl.transcriptConfig.videoTitle}}</span>
         </div>
 
@@ -50,7 +50,7 @@ ng-style=""
 <section class="etTranscriptDisplay etRow"
          ng-class="
      {'fixedVideoPadding':elseisVimeoTranscriptCtrl.videoFixed}"
->
+        >
 
 
     <!--Transcription/subtitles lang menu-->
@@ -65,7 +65,7 @@ ng-style=""
             <span class="etLangOption" ng-repeat="option in elseisVimeoTranscriptCtrl.transcriptLangOptions"
                   ng-click="elseisVimeoTranscriptCtrl.selectedLang = option.id"
                   ng-style=" {'font-weight' : elseisVimeoTranscriptCtrl.selectedLang == option.id ? ' bold' : 'inherit' }"
-            >{{option.id}}</span>
+                    >{{option.id}}</span>
         </section>
         <section class="etFontSize">
             <span class="etFontSizeDesc span_6_of_12_always"

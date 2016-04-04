@@ -99,6 +99,8 @@
           }
         };
 
+        self.transcriptHeaderOffSet= parseInt(self.transcriptConfig.headerHeight)+40;
+
       }).run(['$anchorScroll', function($anchorScroll) {
         $anchorScroll.yOffset = 500;
       }]);
