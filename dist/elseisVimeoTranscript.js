@@ -3,7 +3,7 @@
 
 
   angular.module('elseisVimeoTranscript', [
-    'elseisTemplates'
+    //'elseisTemplates'
   ]);
 
 }());
@@ -72,6 +72,17 @@
             $anchorScroll();
           }
           $scope.$digest();
+        };
+        self.activateFixedMode = function(){
+          if(self.videoFixed){
+            self.videoFixed=false;
+
+            $location.hash('scrollTop');
+
+            $anchorScroll();
+          }else{
+            self.videoFixed=true;
+          }
         };
 
 

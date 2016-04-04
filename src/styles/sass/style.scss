@@ -11,10 +11,13 @@
     float: left;
   }
   .videoContainer {
+    z-index:1;
     background-color: #212121;
     height: auto;
 
+    transition: all 0.5s ease;
     &.fixedVideo {
+      transition: all 0.5s ease;
       min-width: 200px;
       position: fixed;
       top: 9%;

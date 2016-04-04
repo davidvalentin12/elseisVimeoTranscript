@@ -43,12 +43,12 @@
 </head>
 <body ng-controller="confCtrl">
 
-
+<header class="exampleHeader" style="height:100px;"></header>
 <div elseis-vimeo-transcript class="elseisTranscript"
      transcript-config="transcriptConfig"
 ></div>
 
-
+<footer class="exampleFooter" style="height:5000px;"></footer>
 
 
 
@@ -76,6 +76,7 @@
                     function ($scope) {
                         $scope.transcriptConfig = {
                             lang:'EN',
+                            headerHeight:'100',
                             videoTitle: 'El Licenciado Vidriera',
                             videoUrl : "https://player.vimeo.com/video/157867069",
                             langOptions :[
