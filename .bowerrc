@@ -1,5 +1,5 @@
 {
   "directory": "bower_components",
-  "proxy": "http://davvalen:Neussegura1.@10.49.1.1:8080",
+  "proxy": "http://:.@10.49.1.1:8080",
   "https-proxy": ""
 }
