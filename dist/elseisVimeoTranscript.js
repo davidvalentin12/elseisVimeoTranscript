@@ -15,8 +15,7 @@
   angular.module('elseisVimeoTranscript')
       .controller('elseisVimeoTranscriptCtrl', ["$anchorScroll", "$scope", "$http", "$location", "$sce", function($anchorScroll, $scope, $http, $location, $sce) {
         var self = this,
-            iframe = $('#player1')[0];
-
+            iframe = angular.element( document.querySelector( '#player1' ) )[0];
         self.vimeoPlayer = $f(iframe);
         self.playerTime = 0;
         self.videoFixed=false;
