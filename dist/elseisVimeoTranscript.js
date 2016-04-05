@@ -3,6 +3,7 @@
 
 
   angular.module('elseisVimeoTranscript', [
+      'scrollPosition',
     'elseisTemplates'
   ]);
 
@@ -92,6 +93,8 @@
           $http.get(langOption.transcriptUrl).then(function(response) {
             self.transcriptLangOptions[langOption.lang] = {
               id: langOption.lang,
+              ES: langOption.langES,
+              EN: langOption.langEN,
               transcript: response.data
             };
           });
@@ -109,7 +112,7 @@
           }
         };
 
-        self.transcriptHeaderOffSet= parseInt(self.transcriptConfig.headerHeight)+40;
+        self.transcriptHeaderOffSet= parseInt(self.transcriptConfig.headerHeight)+60;
 
       }]).run(['$anchorScroll', function($anchorScroll) {
         $anchorScroll.yOffset = 500;
@@ -132,6 +135,29 @@
           }
         };
       });
+
+}());
+
+(function () {
+  'use strict';
+
+
+  angular.module('scrollPosition', [
+  ]).directive('scrollPosition', ["$window", "$document", function($window, $document) {
+    return {
+      scope: {
+        scroll: '=scrollPosition'
+      },
+      link: function(scope, element, attrs) {
+        var windowEl = angular.element($window);
+        var handler = function() {
+          scope.scroll = $document[0].body.scrollTop;
+        };
+        windowEl.on('scroll', scope.$apply.bind(scope, handler));
+        handler();
+      }
+    };
+  }]);
 
 }());
 

@@ -82,6 +82,8 @@
           $http.get(langOption.transcriptUrl).then(function(response) {
             self.transcriptLangOptions[langOption.lang] = {
               id: langOption.lang,
+              ES: langOption.langES,
+              EN: langOption.langEN,
               transcript: response.data
             };
           });
@@ -99,7 +101,7 @@
           }
         };
 
-        self.transcriptHeaderOffSet= parseInt(self.transcriptConfig.headerHeight)+40;
+        self.transcriptHeaderOffSet= parseInt(self.transcriptConfig.headerHeight)+60;
 
       }).run(['$anchorScroll', function($anchorScroll) {
         $anchorScroll.yOffset = 500;
