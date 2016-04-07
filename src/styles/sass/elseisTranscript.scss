@@ -1,4 +1,4 @@
-$corporateWhite : rgb(242,242,242);
+$corporateWhite: rgb(242, 242, 242);
 
 .elseisTranscript {
   background-color: #212121;
@@ -7,15 +7,15 @@ $corporateWhite : rgb(242,242,242);
     width: 80%;
     margin: 0 auto;
   }
-  .fixedVideoPadding{
+  .fixedVideoPadding {
     @media only screen and (max-width: 860px) {
-      padding-top:56% !important;
+      padding-top: 56% !important;
     }
     @media only screen and (max-width: 760px) {
-      padding-top:60% !important;
+      padding-top: 60% !important;
     }
     @media only screen and (max-width: 560px) {
-      padding-top:64% !important;
+      padding-top: 64% !important;
     }
   }
 
@@ -24,7 +24,8 @@ $corporateWhite : rgb(242,242,242);
     padding-bottom: 40px;
     display: table;
     .etLangTitle {
-      padding: 20px 0 20px 0;
+      font-size:1.3em;
+      padding: 10px 0 20px 0;
     }
     .etLangSelection {
       border-bottom: 1px solid $corporateWhite;
@@ -33,31 +34,29 @@ $corporateWhite : rgb(242,242,242);
       .etLangDesc {
         display: block;
         color: $corporateWhite;
-        padding: 10px 5px 10px 5px;
+        padding: 5px 0 5px 0;
       }
       .etLangOption {
         display: block;
-        padding: 10px;
+        padding: 5px 0 5px 2px;
         color: $corporateWhite;
-
-        cursor:pointer;
+        cursor: pointer;
       }
     }
     .etFontSize {
       border-bottom: 1px solid $corporateWhite;
 
-
       .etFontSizeDesc {
         color: $corporateWhite;
         padding: 10px 5px 10px 5px;
-        display:inline-block;
-        width:50%;
+        display: inline-block;
+        width: 50%;
       }
-      .plusSize, .minusSize{
-        cursor:pointer;
-        display:table-cell;
-        text-align:center;
-        float:right;
+      .plusSize, .minusSize {
+        cursor: pointer;
+        display: table-cell;
+        text-align: center;
+        float: right;
         padding: 10px 10px;
       }
     }
@@ -65,45 +64,72 @@ $corporateWhite : rgb(242,242,242);
     .etTranscriptContent {
 
       .etParagraph {
-        width:100%;
+        width: 100%;
         float: left;
         min-height: 40px;
-        padding: 10px 0 0 0;
+        padding: 5px 3px 5px 3px;
+        overflow:hidden;
+        position: relative;
+        color: $corporateWhite;
+        text-decoration: none;
+
+
         .etParagraphTime {
           padding: 10px 5px 10px 5px;
           display: table-cell;
           text-align: center;
         }
         .etParagraphText {
+          margin: 10px 0 10px 0;
+          padding: 0 5px  0 5px;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            left: 0;
+            bottom: 100%;
+            background-color: $corporateWhite;
+            visibility: hidden;
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transition-property: top;
+            transition-property: top;
+            -webkit-transition: all 0.6s ease-in-out 0s;
+            transition: all 0.6s ease-in-out 0s;
+          }
+          &.selectedParagraph:before {
+            bottom:0;
+            visibility: visible;
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+          }
 
-          padding: 10px 0 10px 0;
-          .etFragment{
-            cursor:pointer;
-            margin-right:3px;
-              color: $corporateWhite;
-              border-bottom:0 solid #969696;
+          .etFragment {
+            cursor: pointer;
+            margin-right: 3px;
+            color: $corporateWhite;
+            border-bottom: 0 solid #969696;
             -webkit-transition: all 0.4s ease-out 0s;
             transition: all 0.4s ease-out 0s;
             -webkit-transition: all 0.6s ease-in 0s;
             transition: all 0.6s ease-in 0s;
 
             &.selectedFragment {
-              border-bottom:1px solid $corporateWhite;
+              border-bottom: 1px solid $corporateWhite;
               -webkit-transition: all 0.4s ease-out 0s;
               transition: all 0.4s ease-out 0s;
               -webkit-transition: all 0.6s ease-in 0s;
               transition: all 0.6s ease-in 0s;
             }
 
-
-
-           //&.selectedFragment{
-           //  border-bottom:1px solid $corporateWhite;
-           //  -webkit-transform: scaleX(1);
-           //  transform: scaleX(1);
-           //}
+            //&.selectedFragment{
+            //  border-bottom:1px solid $corporateWhite;
+            //  -webkit-transform: scaleX(1);
+            //  transform: scaleX(1);
+            //}
           }
-
 
         }
       }

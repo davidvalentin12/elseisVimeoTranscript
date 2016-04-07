@@ -74,6 +74,25 @@
           }
         };
 
+        self.paragraphIsSelected = function paragraphIsSelected(paragraph){
+          var tCurrentPlayerTime = self.player.currentTime,
+              tParagraphStartTime,
+              tParagraphEndTime;
+
+          tParagraphEndTime = paragraph.fragments[Object.keys(paragraph.fragments).length-1].endTime;
+          tParagraphStartTime = paragraph.fragments[0].startTime;
+          console.log(tCurrentPlayerTime);
+
+
+          return (tParagraphStartTime < tCurrentPlayerTime+500 && tParagraphEndTime > tCurrentPlayerTime-500);
+
+
+
+         //console.log(paragraph.time < self.player.currentTime+500 &&
+         //paragraph[Object.keys(paragraph.fragments).length-2].endTime > self.player.currentTime-500)
+
+        }
+
 
         self.transcriptLangOptions = {};
         self.selectedLang = self.transcriptConfig.defaultLang;

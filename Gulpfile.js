@@ -79,7 +79,6 @@
   CONFIG.COMMIT_FILES = [
     CONFIG.SRC_PATH,
     CONFIG.DIST_PATH,
-    './.bowerrc',
       '/.gitignore',
       './dist',
     './bower.json',
