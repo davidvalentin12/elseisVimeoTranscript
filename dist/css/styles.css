@@ -91,10 +91,10 @@
           background-size: 0 3px;
           transition-property: background-size; }
           .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText .etFragment.selectedFragment {
-            background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.64) 50%);
+            background-image: linear-gradient(180deg, transparent 50%, rgba(255, 255, 255, 0.64) 0);
             background-repeat: no-repeat;
             background-size: 200% 2px;
-            background-position: 0 1em;
+            background-position: 0 0.9em;
             text-shadow: 0.03em 0 #171717; }
 
 .elseisTranscript {
@@ -347,10 +347,10 @@
           background-size: 0 3px;
           transition-property: background-size; }
           .elseisTranscript .etTranscriptDisplay .etTranscriptContent .etParagraph .etParagraphText .etFragment.selectedFragment {
-            background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.64) 50%);
+            background-image: linear-gradient(180deg, transparent 50%, rgba(255, 255, 255, 0.64) 0);
             background-repeat: no-repeat;
             background-size: 200% 2px;
-            background-position: 0 1em;
+            background-position: 0 0.9em;
             text-shadow: 0.03em 0 #171717; }
 
 .elseisTranscript {

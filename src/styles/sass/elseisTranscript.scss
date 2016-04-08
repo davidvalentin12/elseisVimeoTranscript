@@ -107,21 +107,19 @@ $corporateBlack: rgb(23, 23, 23);
           }
 
           .etFragment {
-             cursor:pointer;
-
+            cursor: pointer;
             margin-right: 3px;
             color: $corporateWhite;
             text-decoration: none;
             transition-duration: 1s;
-
             background-size: 0 3px;
             transition-property: background-size;
             &.selectedFragment {
-              background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.64) 50%);
+              background-image: linear-gradient(180deg,transparent 50%,hsla(0,0%,100%,.64) 0);
               background-repeat: no-repeat;
               background-size: 200% 2px;
-              background-position: 0 1em;
-              text-shadow: 0.03em 0 $corporateBlack;
+              background-position: 0 0.9em;
+              text-shadow: .03em 0 $corporateBlack;
             }
           }
 
