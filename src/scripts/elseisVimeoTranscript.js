@@ -3,8 +3,8 @@
 
 
   angular.module('elseisVimeoTranscript', [
-      'scrollPosition',
-    'elseisTemplates'
+      'scrollPosition'
+    //'elseisTemplates'
   ]);
 
 }());
