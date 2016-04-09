@@ -12,7 +12,7 @@
   }
   .videoContainer {
     z-index:1;
-    background-color: #212121;
+    background-color: $corporateBlack;
     height: auto;
 
     transition: all 0.5s ease;
@@ -45,8 +45,9 @@
 
     }
     .etVideoControls {
-      border-bottom: 1px solid #969696;
-      border-top: 1px solid #969696;
+      border-bottom: 1px solid $corporateGrey;
+      border-top: 1px solid $corporateGrey;
+      color: $corporateGrey;
       height: 60px;
       overflow: hidden;
       display: table;
@@ -69,10 +70,10 @@
         height: 60px;
         min-width: 60px;
         &.leftbrd {
-          border-left: 1px solid #969696;
+          border-left: 1px solid $corporateGrey;
         }
         &.rightbrd {
-          border-right: 1px solid #969696;
+          border-right: 1px solid $corporateGrey;
         }
 
       }

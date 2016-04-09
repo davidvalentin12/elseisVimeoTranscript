@@ -9,6 +9,7 @@
         self.playerTime = 0;
         self.videoFixed=false;
         self.autoScroll=false;
+        self.fontColorInvert=true;
         // When vimero player is ready
         self.vimeoPlayer.addEvent('ready', function() {
           //Add needed player events here

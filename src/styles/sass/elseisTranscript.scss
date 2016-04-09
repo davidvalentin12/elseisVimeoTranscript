@@ -1,9 +1,10 @@
 $corporateWhite: rgb(242, 242, 242);
 $corporateBlack: rgb(23, 23, 23);
-
+$corporateGrey: rgb(153, 153, 153);
 .elseisTranscript {
   background-color: $corporateBlack;
   color: $corporateWhite;
+
   .etRow {
     width: 80%;
     margin: 0 auto;
@@ -24,44 +25,86 @@ $corporateBlack: rgb(23, 23, 23);
     padding-top: 40px;
     padding-bottom: 40px;
     display: table;
+    &.fontColorInvert{
+      background-color: $corporateWhite;
+      color: $corporateBlack;
+    }
     .etLangTitle {
       font-size: 1.3em;
-      padding: 10px 0 20px 0;
+      padding: 10px 0 20px 5px;
     }
     .etLangSelection {
       border-bottom: 1px solid $corporateWhite;
       border-top: 1px solid $corporateWhite;
-
+      color: $corporateGrey;
+      &.fontColorInvert{
+        color: $corporateBlack;
+        border-bottom: 1px solid $corporateBlack;
+        border-top: 1px solid $corporateBlack;
+      }
       .etLangDesc {
+        color: $corporateGrey;
         display: block;
-        color: $corporateWhite;
-        padding: 5px 0 5px 0;
+        padding: 5px 0 5px 5px;
       }
       .etLangOption {
         display: block;
-        padding: 5px 0 5px 2px;
+        padding: 5px 0 5px 5px;
         color: $corporateWhite;
         cursor: pointer;
+        &.fontColorInvert{
+          color: $corporateBlack;
+        }
       }
     }
     .etFontSize {
+      color: $corporateGrey;
       border-bottom: 1px solid $corporateWhite;
-
+      &.fontColorInvert{
+        border-bottom: 1px solid $corporateBlack;
+      }
       .etFontSizeDesc {
-        color: $corporateWhite;
         padding: 10px 5px 10px 5px;
         display: inline-block;
         width: 50%;
       }
       .plusSize, .minusSize {
+        color: $corporateWhite;
         cursor: pointer;
         display: table-cell;
         text-align: center;
         float: right;
         padding: 10px 10px;
+        &.fontColorInvert{
+          color: $corporateBlack;
+        }
       }
     }
 
+    .etTextColor{
+
+      border-bottom: 1px solid $corporateWhite;
+      &.fontColorInvert{
+        border-bottom: 1px solid $corporateBlack;
+      }
+      .etTextColorDesc {
+        color: $corporateGrey;
+        padding: 10px 5px 10px 5px;
+        display: inline-block;
+        width: 50%;
+      }
+      .etTextColorInvert {
+        color: $corporateWhite;
+        cursor: pointer;
+        display: table-cell;
+        text-align: center;
+        float: right;
+        padding: 10px 10px;
+        &.fontColorInvert{
+          color: $corporateBlack;
+        }
+      }
+    }
     .etTranscriptContent {
 
       .etParagraph {
@@ -73,6 +116,9 @@ $corporateBlack: rgb(23, 23, 23);
         position: relative;
         color: $corporateWhite;
         text-decoration: none;
+        &.fontColorInvert{
+          color: $corporateBlack;
+        }
 
         .etParagraphTime {
           padding: 10px 5px 10px 5px;
@@ -99,6 +145,9 @@ $corporateBlack: rgb(23, 23, 23);
             -webkit-transition: all 0.6s ease-in-out 0s;
             transition: all 0.6s ease-in-out 0s;
           }
+          &.fontColorInvert:before{
+            background-color: $corporateBlack;
+          }
           &.selectedParagraph:before {
             bottom: 0;
             visibility: visible;
@@ -114,12 +163,18 @@ $corporateBlack: rgb(23, 23, 23);
             transition-duration: 1s;
             background-size: 0 3px;
             transition-property: background-size;
+            &.fontColorInvert{
+              color: $corporateBlack;
+            }
             &.selectedFragment {
-              background-image: linear-gradient(180deg,transparent 50%,hsla(0,0%,100%,.64) 0);
+              background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,rgba(255, 255, 255, 0.64) 50%);
               background-repeat: no-repeat;
-              background-size: 200% 2px;
-              background-position: 0 0.9em;
-              text-shadow: .03em 0 $corporateBlack;
+              background-size: 100% 2px;
+              background-position: 0 1em;
+              text-shadow: 0.03em 0 rgb(23,23,23), -0.03em 0rgb(23,23,23), 0 0.03em rgb(23,23,23), 0 -0.03em rgb(23,23,23), 0.06em 0 rgb(23,23,23), -0.06em 0 rgb(23,23,23), 0.09em 0 rgb(23,23,23), -0.09em 0 rgb(23,23,23), 0.12em 0 rgb(23,23,23), -0.12em 0 rgb(23,23,23), 0.15em 0 rgb(23,23,23), -0.15em 0 rgb(23,23,23);
+              &.fontColorInvert{
+                background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0) 50%, rgba(13, 13, 13, 0.64) 50%);
+              }
             }
           }
 

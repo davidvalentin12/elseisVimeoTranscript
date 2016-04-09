@@ -24,7 +24,7 @@
              ng-attr-title="{{elseisVimeoTranscriptCtrl.transcriptConfig.videoTitle}}"
              ng-class="
      {'etVideoFixed':elseisVimeoTranscriptCtrl.videoFixed}"
-        ><span ng-bind-html="elseisVimeoTranscriptCtrl.transcriptConfig.videoTitle | sanitize">
+                ><span ng-bind-html="elseisVimeoTranscriptCtrl.transcriptConfig.videoTitle | sanitize">
     </span>
         </div>
 
@@ -49,17 +49,18 @@
     </section>
 </div>
 
-<section class="etTranscriptDisplay etRow"
+<section class="etTranscriptDisplay  etRow"
          ng-class="
-     {'fixedVideoPadding':elseisVimeoTranscriptCtrl.videoFixed}"
->
+     {'fixedVideoPadding':elseisVimeoTranscriptCtrl.videoFixed, 'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}"
+        >
     <!--Transcription/subtitles lang menu-->
     <aside class="span_3_of_12 flt-left" ng-if="!elseisVimeoTranscriptCtrl.videoFixed">
         <header>
             <h3 class="etLangTitle"
                 ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Transcripción interactiva' : 'Interactive transcription')"></h3>
         </header>
-        <section class="etLangSelection">
+        <section class="etLangSelection"
+                 ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
             <span class="etLangDesc"
                   ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Seleccionar idioma' : 'Select Language')"></span>
             <span class="etLangOption"
@@ -67,20 +68,35 @@
                   ng-attr-title="{{(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Seleccionar '+ option.ES: 'Select '+ option.EN)}}"
                   ng-click="elseisVimeoTranscriptCtrl.selectedLang = option.id"
                   ng-style=" {'font-weight' : elseisVimeoTranscriptCtrl.selectedLang == option.id ? ' bold' : 'inherit' }"
-                  ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? option.ES : option.EN)"></span>
+                  ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? option.ES : option.EN)"
+                  ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}"></span>
         </section>
-        <section class="etFontSize">
+        <section class="etFontSize"
+                 ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
             <span class="etFontSizeDesc span_6_of_12_always"
                   ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Tamaño de letra' : 'Text size')"></span>
             <span class="span_3_of_12_always plusSize"
                   ng-attr-title="{{(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Aumentar tamaño de letra' : 'Increse font size')}}"
-                  ng-click="elseisVimeoTranscriptCtrl.plusFontSize()">
+                  ng-click="elseisVimeoTranscriptCtrl.plusFontSize()"
+                  ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
                 <i class="fa fa-plus-square"></i>
             </span>
             <span class="span_3_of_12_always minusSize"
                   ng-attr-title="{{(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Disminuir tamaño de letra' : 'Decrese font size')}}"
-                  ng-click="elseisVimeoTranscriptCtrl.minusFontSize()">
+                  ng-click="elseisVimeoTranscriptCtrl.minusFontSize()"
+                  ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
                 <i class="fa fa-minus-square"></i>
+            </span>
+        </section>
+        <section class="etTextColor"
+                 ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
+            <span class="etTextColorDesc span_6_of_12_always"
+                  ng-bind="(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Invertir color ' : 'Invert color ')"></span>
+            <span class="span_3_of_12_always etTextColorInvert"
+                  ng-attr-title="{{(elseisVimeoTranscriptCtrl.transcriptConfig.lang=='ES'? 'Invertir color de texto y fondo' : 'Invert text and background color')}}"
+                  ng-click="elseisVimeoTranscriptCtrl.fontColorInvert = !elseisVimeoTranscriptCtrl.fontColorInvert"
+                  ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
+                <i class="fa fa-font"></i>
             </span>
         </section>
     </aside>
@@ -90,23 +106,19 @@
 
         <div class="etParagraph"
              ng-repeat="paragraph in elseisVimeoTranscriptCtrl.transcriptLangOptions[elseisVimeoTranscriptCtrl.selectedLang].transcript"
-
-
-        >
-
+             ng-class="{'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
 
 
             <div class="etParagraphTime span_2_of_12 flt-left">
                 <span ng-bind="paragraph.time | milisecondsToDateTime | date:'mm:ss'"></span>
             </div>
             <div class="etParagraphText span_10_of_12 flt-right"
-
-               ng-class="{'selectedParagraph':elseisVimeoTranscriptCtrl.paragraphIsSelected(paragraph)}">
+                 ng-class="{'selectedParagraph':elseisVimeoTranscriptCtrl.paragraphIsSelected(paragraph), 'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}">
                 <span class="etFragment"
                       id="scrollTo{{ textFragment.startTime | milisecondsToSeconds}}"
                       ng-repeat="textFragment in paragraph.fragments"
                       ng-class="{'selectedFragment':(textFragment.startTime < elseisVimeoTranscriptCtrl.player.currentTime+500 &&
-                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-500 )}"
+                textFragment.endTime > elseisVimeoTranscriptCtrl.player.currentTime-500 ), 'fontColorInvert':!elseisVimeoTranscriptCtrl.fontColorInvert}"
                       ng-click="elseisVimeoTranscriptCtrl.player.seekTo(textFragment.startTime/1000)"
                       ng-style=" { 'font-size':elseisVimeoTranscriptCtrl.transcriptFontSize+'%' }"
 
